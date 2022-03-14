@@ -1,0 +1,8 @@
+name: JS CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: kkoles/workflows-examples/blob/main/.github/workflows/js.yml@main
