@@ -5,4 +5,4 @@ on:
 
 jobs:
   build:
-    uses: kkoles/workflows-examples/.github/workflows/js/js.yml@main
+    uses: kkoles/workflows-examples/.github/workflows/js.yml@main
