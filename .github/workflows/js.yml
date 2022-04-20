@@ -4,8 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    uses: kkoles/workflows-examples/.github/workflows/js.yml@main
+
+  scan-project-with-snyk:
+    uses: kkoles/workflows-examples/.github/workflows/js_snyk_scan.yml@main
     secrets:
-      GH_READONLY_TOKEN: ${{ secrets.GH_READONLY_TOKEN }}
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+  scan-project-with-npm-audit:
+    uses: kkoles/workflows-examples/.github/workflows/js_npm_audit_scan.yml@main
+    with:
+      NODE_VERSION: 14.x
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GH_READONLY_TOKEN }}
