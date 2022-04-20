@@ -16,3 +16,8 @@ jobs:
       NODE_VERSION: 14.x
     secrets:
       GITHUB_TOKEN_FOR_ISSUE_CREATION: ${{ secrets.GH_READONLY_TOKEN }}
+
+  test-project-with-selenium:
+    uses: kkoles/workflows-examples/.github/workflows/js_selenium_test.yml@main
+    with:
+      NODE_VERSION: 14.x
