@@ -13,11 +13,16 @@ jobs:
   scan-project-with-npm-audit:
     uses: kkoles/workflows-examples/.github/workflows/js_npm_audit_scan.yml@main
     with:
-      NODE_VERSION: 14.x
+      NODE_VERSION: '16'
     secrets:
       GITHUB_TOKEN_FOR_ISSUE_CREATION: ${{ secrets.GH_READONLY_TOKEN }}
 
   test-project-with-selenium:
     uses: kkoles/workflows-examples/.github/workflows/js_selenium_test.yml@main
     with:
-      NODE_VERSION: 14.x
+      NODE_VERSION: '16'
+
+  test-project-with-jest:
+    uses: kkoles/workflows-examples/.github/workflows/js_jest_test.yml@main
+    with:
+      NODE_VERSION: '16'
