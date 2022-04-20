@@ -8,3 +8,4 @@ jobs:
     uses: kkoles/workflows-examples/.github/workflows/js.yml@main
     secrets:
       GH_READONLY_TOKEN: ${{ secrets.GH_READONLY_TOKEN }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
