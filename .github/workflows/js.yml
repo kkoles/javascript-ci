@@ -25,4 +25,11 @@ jobs:
   test-project-with-jest:
     uses: kkoles/workflows-examples/.github/workflows/js_jest_test.yml@main
     with:
-      NODE_VERSION: '14'
+      NODE_VERSION: '16'
+
+  publish-project-with-npm-publish:
+    uses: kkoles/workflows-examples/.github/workflows/js_npm_publish.yml@main
+    with:
+      NODE_VERSION: '16'
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
