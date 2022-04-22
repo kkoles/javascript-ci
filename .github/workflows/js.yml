@@ -3,6 +3,10 @@ name: JS CI
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
 
   scan-project-with-snyk:
@@ -15,7 +19,7 @@ jobs:
     with:
       NODE_VERSION: '16'
     secrets:
-      GITHUB_TOKEN_FOR_ISSUE_CREATION: ${{ secrets.GH_READONLY_TOKEN }}
+      GITHUB_TOKEN_FOR_ISSUE_CREATION: ${{ github.token }}
 
   test-project-with-selenium:
     uses: kkoles/workflows-examples/.github/workflows/js_selenium_test.yml@main
